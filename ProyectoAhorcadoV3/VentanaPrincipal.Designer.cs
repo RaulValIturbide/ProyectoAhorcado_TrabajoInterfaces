@@ -1,6 +1,6 @@
 ﻿namespace ProyectoAhorcadoV3
 {
-    partial class Form1
+    partial class VentanaPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -31,10 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_pruebaSuerte = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.img_imagenAhorcado = new System.Windows.Forms.PictureBox();
             this.lbl_reloj = new System.Windows.Forms.Label();
             this.lbl_pista = new System.Windows.Forms.Label();
             this.lbl_txt_LetrasSeleccionadas = new System.Windows.Forms.Label();
@@ -54,31 +53,33 @@
             this.modoDesarrolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_generarNuevaPalabra = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodasLasPalabrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.img_imagenAhorcado = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_imagenAhorcado)).BeginInit();
             this.menu_Strip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_imagenAhorcado)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Titulo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.img_imagenAhorcado, 3, 1);
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.423231F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.26279F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.26279F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.26279F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.26279F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.26279F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.26279F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_pruebaSuerte, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Titulo, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.img_imagenAhorcado, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_reloj, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_pista, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_txt_LetrasSeleccionadas, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_letrasSeleccionadas, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_intentos, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_pista, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_txt_LetrasSeleccionadas, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_letrasSeleccionadas, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_intentos, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -99,33 +100,33 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 216);
+            this.label1.Location = new System.Drawing.Point(71, 216);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 72);
+            this.label1.Size = new System.Drawing.Size(242, 72);
             this.label1.TabIndex = 0;
             this.label1.Text = "Palabra_Seleccionada";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btn_pruebaSuerte
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(145, 329);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 31);
-            this.button1.TabIndex = 2;
-            this.button1.TabStop = false;
-            this.button1.Text = "Prueba Suerte";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_pruebaSuerte.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_pruebaSuerte.Location = new System.Drawing.Point(202, 329);
+            this.btn_pruebaSuerte.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_pruebaSuerte.Name = "btn_pruebaSuerte";
+            this.btn_pruebaSuerte.Size = new System.Drawing.Size(114, 31);
+            this.btn_pruebaSuerte.TabIndex = 2;
+            this.btn_pruebaSuerte.TabStop = false;
+            this.btn_pruebaSuerte.Text = "Jugar";
+            this.btn_pruebaSuerte.UseVisualStyleBackColor = true;
+            this.btn_pruebaSuerte.Click += new System.EventHandler(this.btnpruebaSuerte_Click);
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(0, 340);
+            this.textBox1.Location = new System.Drawing.Point(68, 340);
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
+            this.textBox1.Size = new System.Drawing.Size(124, 20);
             this.textBox1.TabIndex = 1;
             // 
             // lbl_Titulo
@@ -134,23 +135,12 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lbl_Titulo, 4);
             this.lbl_Titulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Titulo.Font = new System.Drawing.Font("MS PGothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(138, 0);
+            this.lbl_Titulo.Location = new System.Drawing.Point(195, 0);
             this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(534, 72);
+            this.lbl_Titulo.Size = new System.Drawing.Size(490, 72);
             this.lbl_Titulo.TabIndex = 3;
             this.lbl_Titulo.Text = "EL AHORCADO";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // img_imagenAhorcado
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.img_imagenAhorcado, 3);
-            this.img_imagenAhorcado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_imagenAhorcado.Location = new System.Drawing.Point(408, 75);
-            this.img_imagenAhorcado.Name = "img_imagenAhorcado";
-            this.tableLayoutPanel1.SetRowSpan(this.img_imagenAhorcado, 4);
-            this.img_imagenAhorcado.Size = new System.Drawing.Size(403, 282);
-            this.img_imagenAhorcado.TabIndex = 4;
-            this.img_imagenAhorcado.TabStop = false;
             // 
             // lbl_reloj
             // 
@@ -158,7 +148,7 @@
             this.lbl_reloj.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_reloj.Location = new System.Drawing.Point(3, 424);
             this.lbl_reloj.Name = "lbl_reloj";
-            this.lbl_reloj.Size = new System.Drawing.Size(129, 13);
+            this.lbl_reloj.Size = new System.Drawing.Size(62, 13);
             this.lbl_reloj.TabIndex = 5;
             this.lbl_reloj.Text = "0 s";
             // 
@@ -168,9 +158,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lbl_pista, 3);
             this.lbl_pista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_pista.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pista.Location = new System.Drawing.Point(408, 360);
+            this.lbl_pista.Location = new System.Drawing.Point(443, 360);
             this.lbl_pista.Name = "lbl_pista";
-            this.lbl_pista.Size = new System.Drawing.Size(403, 77);
+            this.lbl_pista.Size = new System.Drawing.Size(368, 77);
             this.lbl_pista.TabIndex = 6;
             this.lbl_pista.Text = "Pista";
             this.lbl_pista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,9 +172,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lbl_txt_LetrasSeleccionadas, 2);
             this.lbl_txt_LetrasSeleccionadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_txt_LetrasSeleccionadas.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_txt_LetrasSeleccionadas.Location = new System.Drawing.Point(3, 72);
+            this.lbl_txt_LetrasSeleccionadas.Location = new System.Drawing.Point(71, 72);
             this.lbl_txt_LetrasSeleccionadas.Name = "lbl_txt_LetrasSeleccionadas";
-            this.lbl_txt_LetrasSeleccionadas.Size = new System.Drawing.Size(264, 72);
+            this.lbl_txt_LetrasSeleccionadas.Size = new System.Drawing.Size(242, 72);
             this.lbl_txt_LetrasSeleccionadas.TabIndex = 7;
             this.lbl_txt_LetrasSeleccionadas.Text = "Letras Seleccionadas";
             this.lbl_txt_LetrasSeleccionadas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,9 +185,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lbl_letrasSeleccionadas, 2);
             this.lbl_letrasSeleccionadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_letrasSeleccionadas.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_letrasSeleccionadas.Location = new System.Drawing.Point(3, 144);
+            this.lbl_letrasSeleccionadas.Location = new System.Drawing.Point(71, 144);
             this.lbl_letrasSeleccionadas.Name = "lbl_letrasSeleccionadas";
-            this.lbl_letrasSeleccionadas.Size = new System.Drawing.Size(264, 72);
+            this.lbl_letrasSeleccionadas.Size = new System.Drawing.Size(242, 72);
             this.lbl_letrasSeleccionadas.TabIndex = 8;
             this.lbl_letrasSeleccionadas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -205,9 +195,9 @@
             // 
             this.lbl_intentos.AutoSize = true;
             this.lbl_intentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_intentos.Location = new System.Drawing.Point(273, 144);
+            this.lbl_intentos.Location = new System.Drawing.Point(319, 144);
             this.lbl_intentos.Name = "lbl_intentos";
-            this.lbl_intentos.Size = new System.Drawing.Size(129, 72);
+            this.lbl_intentos.Size = new System.Drawing.Size(118, 72);
             this.lbl_intentos.TabIndex = 9;
             this.lbl_intentos.Text = "0 fallos";
             this.lbl_intentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,7 +235,7 @@
             this.txt_MostrarNombreUsuario,
             this.personalizarNombreToolStripMenuItem});
             this.nombreUsuarioToolStripMenuItem.Name = "nombreUsuarioToolStripMenuItem";
-            this.nombreUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombreUsuarioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.nombreUsuarioToolStripMenuItem.Text = "Nombre Usuario";
             // 
             // txt_MostrarNombreUsuario
@@ -268,7 +258,7 @@
             this.letraMedianaToolStripMenuItem,
             this.letraGrandeToolStripMenuItem});
             this.accesibilidadToolStripMenuItem.Name = "accesibilidadToolStripMenuItem";
-            this.accesibilidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accesibilidadToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.accesibilidadToolStripMenuItem.Text = "Accesibilidad";
             // 
             // letraPequeñaToolStripMenuItem
@@ -295,7 +285,7 @@
             // comoJugarToolStripMenuItem
             // 
             this.comoJugarToolStripMenuItem.Name = "comoJugarToolStripMenuItem";
-            this.comoJugarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comoJugarToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.comoJugarToolStripMenuItem.Text = "Como Jugar";
             this.comoJugarToolStripMenuItem.Click += new System.EventHandler(this.comoJugarToolStripMenuItem_Click);
             // 
@@ -323,7 +313,18 @@
             this.verTodasLasPalabrasToolStripMenuItem.Text = "Ver Todas las Palabras";
             this.verTodasLasPalabrasToolStripMenuItem.Click += new System.EventHandler(this.verTodasLasPalabrasToolStripMenuItem_Click);
             // 
-            // Form1
+            // img_imagenAhorcado
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.img_imagenAhorcado, 3);
+            this.img_imagenAhorcado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_imagenAhorcado.Location = new System.Drawing.Point(443, 75);
+            this.img_imagenAhorcado.Name = "img_imagenAhorcado";
+            this.tableLayoutPanel1.SetRowSpan(this.img_imagenAhorcado, 4);
+            this.img_imagenAhorcado.Size = new System.Drawing.Size(368, 282);
+            this.img_imagenAhorcado.TabIndex = 4;
+            this.img_imagenAhorcado.TabStop = false;
+            // 
+            // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,14 +332,14 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menu_Strip);
             this.MainMenuStrip = this.menu_Strip;
-            this.Name = "Form1";
+            this.Name = "VentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_imagenAhorcado)).EndInit();
             this.menu_Strip.ResumeLayout(false);
             this.menu_Strip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_imagenAhorcado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,7 +350,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_pruebaSuerte;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.PictureBox img_imagenAhorcado;
         private System.Windows.Forms.Label lbl_reloj;

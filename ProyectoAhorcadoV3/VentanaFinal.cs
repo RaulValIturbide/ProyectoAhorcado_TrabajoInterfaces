@@ -75,9 +75,9 @@ namespace ProyectoAhorcadoV3
         private void btn_reiniciar_Click(object sender, EventArgs e)
         {
             this.Close();
-            Reproductor.PararSonido();
+            Reproductor.PararSonidoEfectos();
 
-            if(formPrincipal is Form1 juego)
+            if(formPrincipal is VentanaPrincipal juego)
             {
                 juego.ReiniciarJuego();
             }   

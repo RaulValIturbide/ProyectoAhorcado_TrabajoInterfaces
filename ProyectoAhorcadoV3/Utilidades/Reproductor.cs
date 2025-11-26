@@ -14,17 +14,17 @@ namespace ProyectoAhorcadoV3.Utilidades
         /// Reproduce un sonido WAV desde los recursos del proyecto.
         /// </summary>
         /// <param name="sonido">El recurso WAV que quieras reproducir</param>
-        public static void ReproducirSonido(System.IO.Stream sonido)
+        private static void ReproducirSonidoEfectos(System.IO.Stream sonido)
         {
             reproductorActual = new SoundPlayer(sonido);
             reproductorActual.Play();
         }
-        public static void ReproducirSonidoLoop(System.IO.Stream sonido)
+        private static void ReproducirSonidoLoop(System.IO.Stream sonido)
         {
             reproductorActual = new SoundPlayer(sonido);
             reproductorActual.PlayLooping();
         }
-        public static void PararSonido()
+        public static  void PararSonidoEfectos()
         {
             if (reproductorActual != null)
             {
@@ -37,7 +37,7 @@ namespace ProyectoAhorcadoV3.Utilidades
         /// </summary>
         public static void ReproducirVictoria()
         {
-            ReproducirSonido(Properties.Resources.sonido_victoria);
+            ReproducirSonidoEfectos(Properties.Resources.sonido_victoria);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace ProyectoAhorcadoV3.Utilidades
         /// </summary>
         public static void ReproducirDerrota()
         {
-            ReproducirSonido(Properties.Resources.sonido_derrota);
+            ReproducirSonidoEfectos(Properties.Resources.sonido_derrota);
         }
         public static void ReproducirMusicaAmbiental()
         {

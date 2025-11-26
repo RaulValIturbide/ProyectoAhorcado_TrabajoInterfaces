@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ProyectoAhorcadoV3
 {
-    public partial class Form1 : Form
+    public partial class VentanaPrincipal : Form
     {
         #region Propiedades Privadas
         private static Palabras palabraSeleccionada; //Esta es la palabra para la partida actual
@@ -24,7 +24,7 @@ namespace ProyectoAhorcadoV3
         private int tiempoSegundos = 0;//El tiempo que lleva la partida ejecutandose
         private Usuario Jugador = new Usuario(); //El usuario actual de la partida (default -> "invitado",no admin)
         #endregion
-        public Form1()
+        public VentanaPrincipal()
         {
             InitializeComponent();
 
@@ -51,8 +51,9 @@ namespace ProyectoAhorcadoV3
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void btnpruebaSuerte_Click(object sender, EventArgs e)
         {
+            this.Validate(); //Intentando resolver el problema de fallo en la lectura del textbox (prblema con foco ¿?)
             string user = textBox1.Text.Trim().ToLower();
             Console.WriteLine("Texto Introducido: " + user + "Tamaño: " + user.Length);//TODO Corregir esto
             Error error = ValidarDatos(user); //Comprobamos que está todo correcto 
@@ -143,6 +144,14 @@ namespace ProyectoAhorcadoV3
             ventanaAgregarPalabra.ShowDialog();
             tmr_reloj.Start();
         }
+        private void verTodasLasPalabrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tmr_reloj.Stop();
+            VentanaTodasPalabras ventanaTodasPalabras = new VentanaTodasPalabras();
+            ventanaTodasPalabras.ShowDialog();
+            tmr_reloj.Start();
+        }
+
 
         #endregion
 
@@ -156,7 +165,7 @@ namespace ProyectoAhorcadoV3
             string escritura = "";
             for (int i = 0; i < palabraTexto.Length; i++)
             {
-                escritura += " _ ";
+                escritura += "_ ";
             }
             return escritura;
         }
@@ -191,15 +200,14 @@ namespace ProyectoAhorcadoV3
                 {
                     lbl_intentos.Text = $"{contarErrores} fallos";
                 }
-                    DibujarError(contarErrores);
+                DibujarError(contarErrores);                    
             }
             if (!YaExiste(usuario))
             {
                 lbl_letrasSeleccionadas.Text += usuario[0] + ",";
             }
            
-           label1.Text = string.Join(" ", formandoPalabra); // refrescamos la UI
-            
+           label1.Text = string.Join(" ", formandoPalabra);       
         }
         private bool YaExiste(string letraUsuario)
         {
@@ -333,7 +341,7 @@ namespace ProyectoAhorcadoV3
             lbl_pista.Text = "";
             lbl_reloj.Text = "0 s";
             lbl_letrasSeleccionadas.Text = "";
-            button1.Enabled = true;
+            btn_pruebaSuerte.Enabled = true;
             lbl_intentos.Text = $"{contarErrores} fallos";
             Reproductor.ReproducirMusicaAmbiental();
         }
@@ -362,7 +370,7 @@ namespace ProyectoAhorcadoV3
                     lbl_txt_LetrasSeleccionadas.Font = new Font("Verdana", 11, FontStyle.Bold);
                     lbl_letrasSeleccionadas.Font = new Font("Verdana", 7, FontStyle.Regular);
                     textBox1.Font = new Font("Verdana", 7, FontStyle.Regular);
-                    button1.Font = new Font("Verdana", 7, FontStyle.Bold);
+                    btn_pruebaSuerte.Font = new Font("Verdana", 7, FontStyle.Bold);
                     lbl_reloj.Font = new Font("Verdana", 7, FontStyle.Bold);
                     lbl_intentos.Font = new Font("Verdana", 11, FontStyle.Bold);
                     lbl_pista.Font = new Font("Verdana", 8, FontStyle.Regular);
@@ -377,7 +385,7 @@ namespace ProyectoAhorcadoV3
                     lbl_txt_LetrasSeleccionadas.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_letrasSeleccionadas.Font = new Font("Verdana", 12, FontStyle.Regular);
                     textBox1.Font = new Font("Verdana", 12, FontStyle.Regular);
-                    button1.Font = new Font("Verdana", 12, FontStyle.Bold);
+                    btn_pruebaSuerte.Font = new Font("Verdana", 12, FontStyle.Bold);
                     lbl_reloj.Font = new Font("Verdana", 12, FontStyle.Bold);
                     lbl_intentos.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_pista.Font = new Font("Verdana", 11, FontStyle.Regular);
@@ -392,7 +400,7 @@ namespace ProyectoAhorcadoV3
                     lbl_txt_LetrasSeleccionadas.Font = new Font("Verdana", 20, FontStyle.Bold);
                     lbl_letrasSeleccionadas.Font = new Font("Verdana", 16, FontStyle.Regular);
                     textBox1.Font = new Font("Verdana", 16, FontStyle.Regular);
-                    button1.Font = new Font("Verdana", 16, FontStyle.Bold);
+                    btn_pruebaSuerte.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_reloj.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_intentos.Font = new Font("Verdana", 20, FontStyle.Bold);
                     lbl_pista.Font = new Font("Verdana", 14, FontStyle.Regular);
@@ -407,13 +415,7 @@ namespace ProyectoAhorcadoV3
 
         #endregion
 
-        private void verTodasLasPalabrasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tmr_reloj.Stop();
-            VentanaTodasPalabras ventanaTodasPalabras = new VentanaTodasPalabras();
-            ventanaTodasPalabras.ShowDialog();
-            tmr_reloj.Start();
-        }
+
     }
 }
 

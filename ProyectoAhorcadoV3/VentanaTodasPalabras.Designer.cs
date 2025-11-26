@@ -48,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 261);
             this.Controls.Add(this.dataGridView_MostrarPalabras);
+            this.MaximizeBox = false;
             this.Name = "VentanaTodasPalabras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentanaTodasPalabras";
