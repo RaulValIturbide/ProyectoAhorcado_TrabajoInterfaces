@@ -202,5 +202,8 @@
   <ItemGroup>
     <None Include="Resources\Banda_Sonora.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_ahorcado.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

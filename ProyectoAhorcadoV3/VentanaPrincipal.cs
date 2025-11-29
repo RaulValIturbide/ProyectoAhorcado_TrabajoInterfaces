@@ -54,7 +54,7 @@ namespace ProyectoAhorcadoV3
         private void btnpruebaSuerte_Click(object sender, EventArgs e)
         {
             this.Validate(); //Intentando resolver el problema de fallo en la lectura del textbox (prblema con foco ¿?)
-            string user = textBox1.Text.Trim().ToLower();
+            string user = txtBox_Usuario.Text.Trim().ToLower();
             Console.WriteLine("Texto Introducido: " + user + "Tamaño: " + user.Length);//TODO Corregir esto
             Error error = ValidarDatos(user); //Comprobamos que está todo correcto 
 
@@ -62,7 +62,7 @@ namespace ProyectoAhorcadoV3
             {       
                 AparicionLetra(user);               
                 FinalizarPartida(); //Esto comprueba si se han reunido los requisitos para ganar o perder
-                textBox1.Text = "";
+               
 
             }
             else
@@ -70,6 +70,8 @@ namespace ProyectoAhorcadoV3
                 VentanaError ventana = new VentanaError(error.CodigoError, error.MensajeError);
                 ventana.ShowDialog();
             }
+            txtBox_Usuario.Text = "";
+            txtBox_Usuario.Focus(); //Le devolvemos el foco al text box
         }
         /// <summary>
         /// Metodo que va aumentando el reloj y genera una pista si se reunen una serie de condiciones,
@@ -149,6 +151,13 @@ namespace ProyectoAhorcadoV3
             tmr_reloj.Stop();
             VentanaTodasPalabras ventanaTodasPalabras = new VentanaTodasPalabras();
             ventanaTodasPalabras.ShowDialog();
+            tmr_reloj.Start();
+        }
+        private void comoJugarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            tmr_reloj.Stop();
+            VentanaSecundariaReglas ventanaSecundariaReglas = new VentanaSecundariaReglas();
+            ventanaSecundariaReglas.ShowDialog();
             tmr_reloj.Start();
         }
 
@@ -369,7 +378,7 @@ namespace ProyectoAhorcadoV3
                     lbl_Titulo.Font = new Font("Verdana", 15, FontStyle.Bold);
                     lbl_txt_LetrasSeleccionadas.Font = new Font("Verdana", 11, FontStyle.Bold);
                     lbl_letrasSeleccionadas.Font = new Font("Verdana", 7, FontStyle.Regular);
-                    textBox1.Font = new Font("Verdana", 7, FontStyle.Regular);
+                    txtBox_Usuario.Font = new Font("Verdana", 7, FontStyle.Regular);
                     btn_pruebaSuerte.Font = new Font("Verdana", 7, FontStyle.Bold);
                     lbl_reloj.Font = new Font("Verdana", 7, FontStyle.Bold);
                     lbl_intentos.Font = new Font("Verdana", 11, FontStyle.Bold);
@@ -384,7 +393,7 @@ namespace ProyectoAhorcadoV3
                     lbl_Titulo.Font = new Font("Verdana", 22, FontStyle.Bold);
                     lbl_txt_LetrasSeleccionadas.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_letrasSeleccionadas.Font = new Font("Verdana", 12, FontStyle.Regular);
-                    textBox1.Font = new Font("Verdana", 12, FontStyle.Regular);
+                    txtBox_Usuario.Font = new Font("Verdana", 12, FontStyle.Regular);
                     btn_pruebaSuerte.Font = new Font("Verdana", 12, FontStyle.Bold);
                     lbl_reloj.Font = new Font("Verdana", 12, FontStyle.Bold);
                     lbl_intentos.Font = new Font("Verdana", 16, FontStyle.Bold);
@@ -399,7 +408,7 @@ namespace ProyectoAhorcadoV3
                     lbl_Titulo.Font = new Font("Verdana", 28, FontStyle.Bold);
                     lbl_txt_LetrasSeleccionadas.Font = new Font("Verdana", 20, FontStyle.Bold);
                     lbl_letrasSeleccionadas.Font = new Font("Verdana", 16, FontStyle.Regular);
-                    textBox1.Font = new Font("Verdana", 16, FontStyle.Regular);
+                    txtBox_Usuario.Font = new Font("Verdana", 16, FontStyle.Regular);
                     btn_pruebaSuerte.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_reloj.Font = new Font("Verdana", 16, FontStyle.Bold);
                     lbl_intentos.Font = new Font("Verdana", 20, FontStyle.Bold);
@@ -412,6 +421,7 @@ namespace ProyectoAhorcadoV3
             }
 
         }
+
 
         #endregion
 
